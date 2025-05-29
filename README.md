@@ -1,5 +1,3 @@
----
-
 # Smart Contact Manager
 
 A full-stack web application built with Spring Boot that allows users to manage their contacts securely. Features include user authentication, contact CRUD operations, search functionality, email notifications, and a donation system similar to "Buy Me a Coffee".
@@ -69,10 +67,6 @@ A full-stack web application built with Spring Boot that allows users to manage 
    ```bash
    mvn spring-boot:run
    ```
-
----
-
----
 
 ## 📂 Project Structure
 
