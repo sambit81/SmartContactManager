@@ -47,7 +47,6 @@ A full-stack web application built with Spring Boot that allows users to manage 
      spring.datasource.url=jdbc:mysql://localhost:3306/smart_contact_manager
      spring.datasource.username=yourUsername
      spring.datasource.password=yourPassword
-     spring.jpa.hibernate.ddl-auto=update
      ```
 
 5. **Run the Application**:
@@ -55,7 +54,7 @@ A full-stack web application built with Spring Boot that allows users to manage 
    * Right-click on `SmartcontactmanagerApplication.java` → `Run As` → `Java Application`.
 
 6. **Access the App**:
-   Visit `http://localhost:8080` in your browser.
+   Visit `http://localhost:8282` in your browser.
 
 ---
 
