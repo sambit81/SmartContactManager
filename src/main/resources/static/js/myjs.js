@@ -63,7 +63,7 @@ const paymentStart = () => {
 				if (response.status == "created") {
 					// open payment form
 					let options = {
-						key: "rzp_live_YilPsUteiF70fU",
+						key: razorpayKey,
 						amount: response.amount,
 						currency: "INR",
 						name: "Smart Contact Manager",
