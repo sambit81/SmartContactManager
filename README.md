@@ -32,7 +32,7 @@ A full-stack web application built with Spring Boot that allows users to manage 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/sambit81/smart-contact-manager.git
+   git clone https://github.com/sambit81/SmartContactManager.git
    ```
 
 2. **Open STS/IntelliJ** and select:
