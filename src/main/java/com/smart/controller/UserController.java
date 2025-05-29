@@ -12,6 +12,7 @@ import java.util.Optional;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -60,6 +61,12 @@ public class UserController {
 	
 	@Autowired
 	private MyOrderRepository myOrderRepository;
+	
+	@Value("${razorpay.key_id}")
+	private String razorpayKey;
+
+	@Value("${razorpay.key_secret}")
+	private String razorpaySecret;
 
 	// method for adding common data
 	@ModelAttribute
@@ -80,6 +87,7 @@ public class UserController {
 	@RequestMapping("/index")
 	public String dashboard(Model model, Principal principal) {
 		model.addAttribute("title", "User Dashboard");
+		model.addAttribute("razorpay_key", razorpayKey);
 		return "normal/user_dashboard";
 	}
 
@@ -316,7 +324,7 @@ public class UserController {
 		
 		RazorpayClient razorpay = null;
 		try {
-			razorpay = new RazorpayClient("rzp_live_YilPsUteiF70fU", "pmL3fHNGTqpVZE6nfgqJZELm");
+			razorpay = new RazorpayClient(razorpayKey, razorpaySecret);
 
 		} catch (RazorpayException e) {
 			// TODO Auto-generated catch block
